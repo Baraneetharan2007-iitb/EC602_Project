@@ -4,7 +4,7 @@ Group G project for EC602. It applies the **Box–Jenkins univariate methodology
 standard gold in Mumbai (₹ per 10 grams) from **January 2000 to December 2020**. The notebook selects an ARIMA model,
 evaluates its forecasts out of sample on 2020, and forecasts 2021.
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/USERNAME/REPO/blob/main/EC602_cleaned.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/USERNAME/REPO/blob/main/EC602_final_version.ipynb)
 
 ---
 
@@ -94,20 +94,21 @@ See the project report for the full discussion.
 
 ```
 .
-├── EC602_cleaned.ipynb   # full analysis (the command file)
-├── data.xlsx             # raw DBIE export (Excel or CSV)
-├── gold_2000_2020.csv    # assigned sample, written by the notebook
-├── requirements.txt      # Python dependencies
+├── EC602_final_version.ipynb   # full analysis (the command file)
+├── data.xlsx                   # raw data: DBIE export of monthly gold and silver prices
 └── README.md
 ```
+
+Running the notebook also writes `gold_2000_2020.csv`, the assigned 2000–2020 sample, next to the notebook.
 
 ---
 
 ## How to run
 
 ### Option 1: Google Colab (no setup)
-1. Click the **Open in Colab** badge above, or upload `EC602_cleaned.ipynb` at https://colab.research.google.com.
-2. Upload `data.xlsx` to the Colab session (use the folder icon in the left sidebar).
+1. Click the **Open in Colab** badge above, or upload `EC602_final_version.ipynb` at https://colab.research.google.com.
+2. Download `data.xlsx` from this repository, then upload it to the Colab session (folder icon in the left sidebar).
+   Colab opens only the notebook from GitHub, not the other files in the repo.
 3. **Runtime → Run all.**
 
 ### Option 2: Locally
@@ -115,8 +116,8 @@ See the project report for the full discussion.
 git clone https://github.com/USERNAME/REPO.git
 cd REPO
 python -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-jupyter notebook EC602_cleaned.ipynb
+pip install numpy pandas scipy "statsmodels>=0.14" scikit-learn matplotlib openpyxl jupyter
+jupyter notebook EC602_final_version.ipynb
 ```
 Then **Kernel → Restart & Run All**.
 

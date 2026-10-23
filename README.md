@@ -94,8 +94,9 @@ See the project report for the full discussion.
 
 ```
 .
-├── EC602_final_version.ipynb   # full analysis (the command file)
-├── data.xlsx                   # raw data: DBIE export of monthly gold and silver prices
+├── EC602_cleaned.ipynb   # full analysis (the command file)
+├── data.xlsx             # raw DBIE export (Excel or CSV)
+├── requirements.txt      # Python dependencies
 └── README.md
 ```
 
